@@ -1,0 +1,152 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+
+  position: relative; /* Needed for absolute positioning of the inputForm */
+}
+
+.inputForm {
+  position: absolute;
+  bottom: 0; /* Keeps the input form at the bottom */
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #35353b;
+  border-radius: 60px; /* Input form background */
+  padding: 16px 24px;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+/* Styling the scrollbar to match the dark theme */
+.messages::-webkit-scrollbar {
+  width: 8px; /* Adjust width of the scrollbar */
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #35353b; /* Dark track/background */
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #4e4e4e; /* Darker color for the thumb */
+  border-radius: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter color on hover */
+}
+
+.input {
+  flex-grow: 1;
+  padding-left: 24px;
+  margin-right: 10px;
+  border-radius: 60px;
+  font-size: 1em;
+  background-color: #35353b; /* Input background */
+  color: #fff; /* Text color */
+}
+
+.input:focus {
+  outline: none !important;
+
+  background-color: #35353b; /* Focus background color */
+}
+
+.button {
+  padding: 8px 24px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  font-size: 1em;
+  border-radius: 60px;
+}
+
+.button:disabled {
+  background-color: #35353b; /* Disabled button color */
+  color: #666; /* Disabled text color */
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  background-color: #28282c; /* Messages background */
+  white-space: pre-wrap;
+}
+
+.userMessage,
+.assistantMessage,
+.codeMessage {
+  margin: 8px 0;
+  padding: 8px 14px;
+  align-self: flex-start;
+  border-radius: 15px;
+  max-width: 80%;
+  overflow-wrap: break-word;
+}
+
+.assistantMessage img {
+  max-width: 100%;
+  margin: 8px 0px 8px 0px;
+  border-radius: 8px;
+}
+
+.userMessage {
+  align-self: flex-start;
+  color: #fff;
+  background-color: #000; /* Pure black for user message background */
+}
+
+.assistantMessage {
+  color: #fff; /* White text for readability */
+  background-color: #35353b; /* Dark gray for assistant message background */
+}
+
+.codeMessage {
+  padding: 10px 16px;
+  background-color: #181616; /* Even darker background for code messages */
+  font-family: monospace;
+  color: #05e405; /* Bright color for code text */
+}
+
+.codeMessage > div {
+  margin-top: 4px;
+}
+
+.codeMessage span {
+  color: #54dd04; /* Bright green for span elements within code */
+  margin-right: 8px;
+}
+
+.hero {
+  background-image: url("../../public/background.jpg");
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.fileInput {
+  display: none;
+}
