@@ -7,7 +7,7 @@ import WeatherWidget from "../../components/weather-widget";
 import { getWeather } from "../../utils/weather";
 
 import FileViewer from "../../components/file-viewer";
-import { getCryptoPrices } from '../../utils/crypto';
+import { getCryptoPrices } from "../../utils/crypto";
 import SideBar from "@/app/components/SideBar";
 
 const FunctionCalling = () => {
@@ -23,10 +23,11 @@ const FunctionCalling = () => {
   const [activeSessionIndex, setActiveSessionIndex] = useState(null);
 
   useEffect(() => {
-    console.log('Local Storage Contents:', JSON.parse(JSON.stringify(localStorage)));
+    console.log(
+      "Local Storage Contents:",
+      JSON.parse(JSON.stringify(localStorage))
+    );
   }, []);
-
-
 
   const functionCallHandler = async (call: any) => {
     switch (call.function.name) {
@@ -61,9 +62,9 @@ const FunctionCalling = () => {
   const handleNewChat = () => {
     const newSession = {
       messages: [],
-      id: `session-${Date.now()}`
+      id: `session-${Date.now()}`,
     };
-    setSessions(prevSessions => [...prevSessions, newSession]);
+    setSessions((prevSessions) => [...prevSessions, newSession]);
     setActiveSessionIndex(sessions.length);
     setMessages([]);
   };
@@ -79,10 +80,6 @@ const FunctionCalling = () => {
     setActiveSessionIndex(null);
     setMessages([]);
   };
-
-
-
-
 
   return (
     <main className={styles.main}>
