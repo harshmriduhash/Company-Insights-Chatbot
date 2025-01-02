@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaUpload, FaTrash } from 'react-icons/fa';
+import { FaUpload, FaTrash } from "react-icons/fa";
 
 const FileViewer = () => {
   const [files, setFiles] = useState([]);
@@ -45,12 +45,21 @@ const FileViewer = () => {
         These files will be used for the Assistant's knowledgebase.
       </p>
       <div className="border-t border-gray-700 pt-6">
-        <div className={`${files.length !== 0 ? 'mb-6' : ''} max-h-60 overflow-auto`}>
+        <div
+          className={`${
+            files.length !== 0 ? "mb-6" : ""
+          } max-h-60 overflow-auto`}
+        >
           {files.length === 0 ? (
-            <div className="text-sm text-gray-400 font-semibold">No files uploaded yet.</div>
+            <div className="text-sm text-gray-400 font-semibold">
+              No files uploaded yet.
+            </div>
           ) : (
             files.map((file) => (
-              <div key={file.file_id} className="flex justify-between items-center p-3 hover:bg-gray-800 rounded-md transition duration-150 ease-in-out">
+              <div
+                key={file.file_id}
+                className="flex justify-between items-center p-3 hover:bg-gray-800 rounded-md transition duration-150 ease-in-out"
+              >
                 <span className="text-white truncate">{file.filename}</span>
                 <button
                   onClick={() => handleFileDelete(file.file_id)}
@@ -63,7 +72,7 @@ const FileViewer = () => {
             ))
           )}
         </div>
-        <div className='mt-4'>
+        <div className="mt-4">
           <label
             htmlFor="file-upload"
             className="flex items-center justify-center p-4 border-2 border-dashed border-gray-600 rounded-lg cursor-pointer hover:bg-gray-800 transition duration-150 ease-in-out"
