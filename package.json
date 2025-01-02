@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^0.0.40",
+    "@ai-sdk/openai": "^1.0.11",
     "@clerk/clerk-sdk-node": "^5.0.23",
-    "@clerk/nextjs": "^5.2.6",
+    "@clerk/nextjs": "^5.7.5",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@heroicons/react": "^1.0.6",
@@ -20,7 +20,7 @@
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
-    "next": "14.2.5",
+    "next": "^14.2.22",
     "openai": "^4.53.0",
     "react": "^18",
     "react-dom": "^18",
